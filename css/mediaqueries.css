@@ -1,0 +1,59 @@
+/*----mobile version----*/
+@media all and (max-width:420px){
+
+
+.header__pic{
+ width: 100%;
+}
+
+.header__menu, .header__pic, .header__icon{
+display: none;
+}
+
+.mobile__menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40%;
+    width:100%;
+    object-fit: contain;
+}
+
+.catalogue__img{
+    flex-direction: column;
+}
+
+.catalogue__img *{
+    padding: 0 10px 25px 10px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 15px;
+}
+
+p{
+    font-size: 14px;
+    width: 80%;
+}
+
+a{
+    font-size: 10px;
+}
+
+.purpose img{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+
+}
+
+.purpose{
+    flex-direction: column;
+    width: 100%;
+}
