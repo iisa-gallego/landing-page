@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator</title>
+
+<!--AQUÍ LOS LINKS A JS-CSS-->
+    
+</head>
+<body>
+    
+    <form id="createProduct">
+        <input type="file" name="images" placeholder="Product Image" accept="image">
+        <input type="text" name="name" placeholder="Product Reference">
+        <textarea name="description"></textarea>
+        <select name="colors">
+            <option value="" selected>Choose Color</option>
+            <option value="gold"> Gold</option>
+            <option value="silver">Silver</option>
+            <option value="rose gold">Rose Gold</option>
+        </select>
+        <input type="number" name="stock" placeholder="Stock">
+        <input type="number" name="price" placeholder="Price">
+
+        <input type="submit" value="Agregar">
+
+    </form>
+    
+    <script src="./admin.js"></script>
+</body>
+</html>

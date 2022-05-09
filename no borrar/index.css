@@ -79,12 +79,12 @@ a {
 
 body{
     font-family: 'Urbanist', sans-serif;
+    font-style: light;
     margin: 0;    
     
 }
 
 h2{
-   /* font-family: 'Fondamento', cursive;*/
    font-family: 'casanova', normal;
     font-size: 40px;
 }
@@ -110,13 +110,6 @@ h2{
     align-items: center;
 }
 
-.catalogue h2{
-    font-family: 'casanova', normal;
-    font-size: 60px;
-    text-align: center;
-    padding-block: 10%;
-    
-}
 
 .catalogue__content{
     display: flex;
@@ -150,6 +143,22 @@ h2{
 
   .catalogue__button:hover{
     cursor: pointer;
+  }
+
+  .productImage{
+    width: 320px;
+    height: 476px;
+  }
+
+  .productContent{
+      font-size: 36px;
+      font-family: 'Urbanist';
+      font-style: normal;
+  }
+  h4{
+      font-size: 20px ;
+      font-family: 'Urbanist';
+      font-style: light;
   }
 
 /*FOOTER*/

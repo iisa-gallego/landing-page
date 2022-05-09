@@ -14,20 +14,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!--<link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">-->
 
-    <link rel="stylesheet" href="./css/stylesheet.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/mediaqueries.css">
+    <link rel="stylesheet" href="./stylesIndex.scss">
+    <link rel="stylesheet" href="./mediaqueries.css">
+    
 </head>
 
 <!--hacer padding-->
 
 
-    <header>
+    <header class="header">
         
         <div class="header__pic">
-            <img src="./img/logo_image.png" alt="" class="header__logo" href="#">
+            <img src="../img/logo_image.png" alt="" class="header__logo" href="#">
         </div>   
 
         <ul class="header__menu">
@@ -38,25 +37,26 @@
         </ul>    
 
         <ul class="header__icon">  
-            <a href="#"><img src="./img/bag_image.png" alt=""></a>
-            <a href="#"> <img src="./img/user_image.png" alt=""></a>
+            <a href="#"><img src="../img/bag_image.png" alt=""></a>
+            <button><img src="../img/user_image.png" alt=""></button>
         </ul>
          
         <div class="mobile__menu">
-                    <img src="./img/menu_mobile.png" alt="">
-                    <img src="./img/logo_mobile.png" alt="">
+                    <img src="../img/menu_mobile.png" alt="">
+                    <img src="../img/logo_mobile.png" alt="">
                     
                     <div>
-                        <img src="./img/bag_mobile.png" alt="">
-                        <img src="./img/user_mobile.png" alt="">
+                        <img src="../img/bag_mobile.png" alt="">
+                        <button id="logBox"></button>
+                        <img src="../img/user_mobile.png" alt="">
                     </div>
         </div>
     </header>
 
-        
+ 
         
         <section class="banner">
-            <img class="banner__decoration" src="img/img_background.png" alt="#">
+            <img class="banner__decoration" src="../img/img_background.png" alt="#">
         </section>
 
 
@@ -66,7 +66,7 @@
     <section>
         <div class="purpose flex">
             <h2 >Our glorious purpose</h2>
-            <img src="./img/star_left_image.png" alt="">
+            <img src="../img/star_left_image.png" alt="">
             <p class="purpose__p">Maintaining that perfect balance with confidence and a wink. 
                 Drawing inspiration from all the diverse concepts with which we could define women, denoting that what stands out the most is not their jewelry but their confidence. </p>
         </div>
@@ -77,26 +77,22 @@
         <div class="catalogue__content">
             <h2>Shop by jewerly type</h2>
             <div class="catalogue__img">
-                <a href="#"></a><a href=""></a><a href=""></a><img src="img/neckless_image.png" alt="#">
-                <a href="#"></a><img src="img/earrings_image.png" alt="#">
-                <a href="#"></a><img src="img/rings_image.png" alt="#">
+                <a href="#"></a><a href=""></a><a href=""></a><img src="../img/neckless_image.png" alt="#">
+                <a href="#"></a><img src="../img/earrings_image.png" alt="#">
+                <a href="#"></a><img src="../img/rings_image.png" alt="#">
             </div>
         </div>
     
-        <button class="catalogue__button">Watch more</button>
+        <a href="/catalogue/shop.html">Watch more</a>
     </section>
 
 
-    <!--<section>
-        <div>
-            <img src="/img/testimony1_image.png" alt="#">
-            <p>halo</p>
+    <section>
+        <div id="createCatalogue"></div>
+    </section>
 
-            <img src="./img/testimony2_image.png" alt="#">
-            <p>holaaaa</p>
-        </div>
-    </section>-->
-    
+    <script type="module" src="/functions/app.js"></script>
+
 </body>
 
 <footer class="footer">
@@ -111,11 +107,13 @@
         <li> <a href="#"></a>Privacy Policy</li>
         <li> <a href="#"></a>Contact Us</li>
         <li> <a href="#"></a>Follow Us</li>
-        <img src="img/facebook_image.png" alt="#">
-        <img src="img/instagram_image.png" alt="#">
-        <img src="img/WhatsApp.png" alt="">
+        <img src="../img/facebook_image.png" alt="#">
+        <img src="../img/instagram_image.png" alt="#">
+        <img src="../img/WhatsApp.png" alt="">
     </ul>
 </div>
+
+
 
 </footer>
 
