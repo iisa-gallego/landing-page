@@ -1,14 +1,15 @@
 // Import the functions you need from the SDKs you need
-//import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js';
-//import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js';
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+import { createUse, login } from "../scripts/auth";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBzKD26uuUu-ei0iiYiNipJx8NROr4Tn0w",
   authDomain: "tienda-virtual-web.firebaseapp.com",
@@ -30,27 +31,26 @@ createUserForm.addEventListener("submit", e =>{
   const name = createUserForm.name.value;
   const email = createUserForm.email.value;
   const password = createUserForm.password.value;
-  createUser(name, email,password);
 });
 
-async function createUser(name, email, password){
-  try {
-    const { user } = await createUserWithEmailAndPassword(auth, email, password);
-    alert('Welcome! ${user.email}')
-  } catch(e){
 
-    if(e.code === "auth/weak-password"){
-      alert("Your password must have at least 6 characters")
-      
-    }
+createUserForm.addEventListener("submit", e=> {
+  e.preventDefault
+  const name = createUserForm.name.value;
+  const email = createUserForm.email.value;
+  const password = createUserForm.password.value;
+  
+  createUser(auth, name, email,password);
 
-    if(e.code === "auth/email-already-in-use"){
-      alert("This email is already in use")
-      
-    }
+});
 
- 
-   }
+const loginForm = document.getElementById("loginForm");
 
-}
+loginForm.addEventListener("submit", e =>{
+  e.preventDefault
 
+  const email = loginForm.email.value;
+  const password = loginForm.password.value;
+
+  loginForm(auth, email,password);
+})
