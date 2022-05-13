@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -22,35 +23,5 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
-
-const createUserForm = document.getElementById("createUserForm");
-createUserForm.addEventListener("submit", e =>{
-  e.preventDefault();
-
-  const name = createUserForm.name.value;
-  const email = createUserForm.email.value;
-  const password = createUserForm.password.value;
-});
-
-
-createUserForm.addEventListener("submit", e=> {
-  e.preventDefault
-  const name = createUserForm.name.value;
-  const email = createUserForm.email.value;
-  const password = createUserForm.password.value;
-  
-  createUser(auth, name, email,password);
-
-});
-
-const loginForm = document.getElementById("loginForm");
-
-loginForm.addEventListener("submit", e =>{
-  e.preventDefault
-
-  const email = loginForm.email.value;
-  const password = loginForm.password.value;
-
-  loginForm(auth, email,password);
-})
+export const auth = getAuth(app);
+export const db = getFirestore(app);

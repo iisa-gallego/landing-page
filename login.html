@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./register/styles.scss">
+
+</head>
+<body>
+
+    <header class="header">
+            
+        <div class="header__pic">
+            <img src="./img/logo_image.png" alt="" class="header__logo" href="#">
+        </div>   
+
+        <ul class="header__menu">
+            <li class="menu__item"> <a href="./index.html">Home</a></li>
+            <li class="menu__item"> <a href="#">About us</a></li>
+            <li class="menu__item"> <a href="./shop.html">Shop</a></li>
+            <li class="menu__item"> <a href="#">Contact</a></li>
+        </ul>    
+
+        <ul class="header__icon">  
+            <a href="#"><img src="./img/bag_image.png" alt=""></a>
+            <a href="./signin.html"><img src="./img/user_image.png" alt=""></a>
+        </ul>
+    </header>
+
+    <main class="content">
+        <form class="login">
+            <h2>Login</h2>
+            <label>Email<input type="email" placeholder="Email" id="email" name="email"/></label>
+            <label>Password<input type="password" placeholder="Password" id="password" name="password"/></label>
+            <div class="login__labels">
+                <label>Manager<input type="radio" value="Manager" id="manager" name="manager"/></label>
+                <label>Client<input type="radio" value="Client" id="client" name="client"/></label>
+            </div>
+                
+            <input type="submit" value="Submit">
+            
+            <p>Don't have an account?<a href="./signin.html">click here!</a></p>            
+        </form>
+    </main>
+        
+</body>
+</html>

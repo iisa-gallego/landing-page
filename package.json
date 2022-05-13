@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel ./register/*.html",
+    "dev": "parcel ./*.html --no-cache",
+    "build": "parcel build ./*.html --dist-dir output",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.5.0",
-    "parcel": "^2.5.0"
+    "parcel": "^2.5.0",
+    "process": "^0.11.10"
   }
 }
