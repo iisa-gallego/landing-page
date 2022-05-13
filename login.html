@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,50 +8,50 @@
     <title>Login</title>
 
     <!--FONTS-->
-                <!--URBANIST-->
+    <!--URBANIST-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./register/styles.scss">
+    <link rel="stylesheet" href="./login/styles.scss">
 
 </head>
+
 <body>
 
     <header class="header">
-            
+
         <div class="header__pic">
             <img src="./img/logo_image.png" alt="" class="header__logo" href="#">
-        </div>   
+        </div>
 
         <ul class="header__menu">
             <li class="menu__item"> <a href="./index.html">Home</a></li>
             <li class="menu__item"> <a href="#">About us</a></li>
             <li class="menu__item"> <a href="./shop.html">Shop</a></li>
             <li class="menu__item"> <a href="#">Contact</a></li>
-        </ul>    
+        </ul>
 
-        <ul class="header__icon">  
+        <ul class="header__icon">
             <a href="./bag.html"><img src="./img/bag_image.png" alt=""></a>
             <a href="./signin.html"><img src="./img/user_image.png" alt=""></a>
         </ul>
     </header>
 
     <main class="content">
-        <form class="login">
-            <h2>Login</h2>
-            <label>Email<input type="email" placeholder="Email" id="email" name="email"/></label>
-            <label>Password<input type="password" placeholder="Password" id="password" name="password"/></label>
-            <div class="login__labels">
-                <label>Manager<input type="radio" value="Manager" id="manager" name="manager"/></label>
-                <label>Client<input type="radio" value="Client" id="client" name="client"/></label>
-            </div>
-                
-            <input type="submit" value="Submit">
+        <form class="login" id="loginForm">
+            <h2>User Login</h2>
+
+                <label>Email<input  class="login__inputs" type="email" placeholder="Email" id="email" name="email" /></label>
+                <label>Password<input class="login__inputs" type="password" placeholder="Password" id="password" name="password" /></label>
             
-            <p>Don't have an account?<a href="./signin.html">click here!</a></p>            
+            <input class="login__btn" type="submit" value="Login">
+
+            <p>Don't have an account?<a href="./signin.html">click here!</a></p>
         </form>
     </main>
-        
+
+    <script src="./scripts/auth.js" type="module"></script>
 </body>
+
 </html>

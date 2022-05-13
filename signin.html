@@ -1,23 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignIn</title>
 </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!--FONTS-->
+    <!--URBANIST-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./signin/styles.scss">
+
+</head>
+
 <body>
 
-<form id="createUserForm" >
-    <input type="text" placeholder="Your name" name="name">
-    <input type="email" placeholder="Email" name="email">
-    <input type="password" placeholder="Password" name="password">
-    <input type="submit" value="Sign in">
+    <header class="header">
 
-    <p>Have already an account?<a href="./login.html">click here!</a></p>
-    
-</form>
+        <div class="header__pic">
+            <img src="./img/logo_image.png" alt="" class="header__logo" href="#">
+        </div>
 
-    <script src="./functions/app.js"  type="module"></script>
-</body>
+        <ul class="header__menu">
+            <li class="menu__item"> <a href="./index.html">Home</a></li>
+            <li class="menu__item"> <a href="#">About us</a></li>
+            <li class="menu__item"> <a href="./shop.html">Shop</a></li>
+            <li class="menu__item"> <a href="#">Contact</a></li>
+        </ul>
+
+        <ul class="header__icon">
+            <a href="./bag.html"><img src="./img/bag_image.png" alt=""></a>
+            <a href="./signin.html"><img src="./img/user_image.png" alt=""></a>
+        </ul>
+    </header>
+
+    <body>
+
+        <main class="content">
+            <form class="signin" id="createUserForm">
+                <h2>User Sign In</h2>
+
+                <label>Name<input class="signin__inputs" type="text" placeholder="Your name" id="name"
+                        name="name" /></label>
+                <label>Email<input class="signin__inputs" type="email" placeholder="Your Email" id="email"
+                        name="email" /></label>
+                <label>Password<input class="signin__inputs" type="password" placeholder="Password" id="password"
+                        name="password" /></label>
+
+                <input class="signin__btn" type="submit" value="Sign In">
+
+                <p>Have already an account?<a href="./login.html">click here!</a></p>
+
+            </form>
+        </main>
+
+        <script src="./scripts/auth.js" type="module"></script>
+    </body>
+
 </html>
