@@ -30,6 +30,12 @@ a{
         flex-direction: row;
         justify-content: space-between;
         padding: 10px;
+
+        margin: 0;
+        background: rgb(255, 209, 255);
+        background: linear-gradient(133deg, rgba(255, 209, 255, 1) 0%, rgba(252, 234, 213, 1) 49%, rgba(251, 208, 200, 1) 100%);
+        min-height: 80px;
+
         &__pic{
             display: flex;
             align-items: center;
@@ -37,7 +43,7 @@ a{
         &__menu{
             display: flex;
             flex-direction: row;
-            margin-top: 35px;
+            margin-top: 45px;
             justify-content: space-between;
             width: 500px; 
         }

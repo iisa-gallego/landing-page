@@ -8,6 +8,14 @@
     <title>Shop</title>
 </head>
 
+<!--FONTS-->
+<!--URBANIST-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./catalogue/shop.scss">
+
 <header class="header">
 
     <div class="header__pic">
@@ -29,19 +37,19 @@
 
 <body>
 
-    <div class="categories">
+    <div class="filter">
         <li>
-            <button>Neckless</button>
-            <button>Rings</button>
-            <button>Earrings</button>
-            <button>All</button>
+            <button class="filter__btn">Neckless</button>
+            <button class="filter__btn">Rings</button>
+            <button class="filter__btn">Earrings</button>
+            <button class="filter__btn">All</button>
         </li>
 
         <h3>Filter</h3>
         <h4>Search by</h4>
 
         <h3>Name</h3>
-        <input type="text" name="Enter product name">
+        <input class="filter__pName" type="text" name="Enter product name">
 
         <h3>Color</h3>
         <img src="#" alt="Gold">
@@ -50,24 +58,17 @@
 
         <h3>Price</h3>
         <input type="checkbox" id="">
-
     </div>
 
-    <section id="products">
-        <div class="product">
-            <img src="./img/chokerRose.png" alt="" class="product__image">
-            <div class="product__info">
-                <h2 class="product__name">Name</h2>
-                <p class="product__description">Descriptiooon</p>
-                <h3 class="product__price">$1000000</h3>
-                <button class="product__cart">Add to cart</button>
-
-            </div>
+    <div class="catalogue">
+        <img src="./img/chokerRose.png" alt="" class="product__image">
+        <div class="product__info">
+            <h2 class="product__name">Name</h2>
+            <p class="product__description">Descriptiooon</p>
+            <h3 class="product__price">$1000000</h3>
+            <button class="product__cart">Add to cart</button>
 
         </div>
-
-    </section>
-
 
 </body>
 

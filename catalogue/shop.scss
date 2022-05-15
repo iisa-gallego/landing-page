@@ -1,0 +1,75 @@
+$urbanistFont: 'Urbanist', sans-serif;
+
+
+* {
+    font-family: $urbanistFont;
+}
+
+.header {
+    display: flex;
+    height: 15%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+
+    background: rgb(255, 209, 255);
+    background: linear-gradient(133deg, rgba(255, 209, 255, 1) 0%, rgba(252, 234, 213, 1) 49%, rgba(251, 208, 200, 1) 100%);
+    min-height: 80px;
+
+    &__pic {
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        margin-top: 45px;
+        justify-content: space-between;
+        width: 500px;
+    }
+
+    &__item {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100px;
+        margin-right: 20px;
+    }
+
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 50px;
+    
+    &__btn{
+        display: flex;
+        flex-direction: column;
+        Border: none; 
+        background: none;
+        font-size: 28px;
+        text-decoration: none;
+        
+    }
+
+    &__pName{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

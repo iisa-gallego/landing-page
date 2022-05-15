@@ -1,11 +1,11 @@
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../functions/app";
+import { auth } from "../functions/app.js";
+
 
 async function createUser(auth, name, email, password) {
   try {
     const { user } = await createUserWithEmailAndPassword(auth, email, password);
-    return user;
-    window.location.href = "./shop.html";
+    window.location.href = "/shop.html";
 
   } catch (e) {
     console.log(e.code);
