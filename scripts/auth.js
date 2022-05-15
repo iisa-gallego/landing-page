@@ -4,7 +4,9 @@ import { auth } from "../functions/app";
 async function createUser(auth, name, email, password) {
   try {
     const { user } = await createUserWithEmailAndPassword(auth, email, password);
+    return user;
     window.location.href = "./shop.html";
+
   } catch (e) {
     console.log(e.code);
     if (e.code === "auth/weak-password") {
@@ -33,11 +35,12 @@ if (createUserForm) {
   createUserForm.addEventListener("submit", e => {
     e.preventDefault();
     const name = createUserForm.name.value;
+    //const lastName = createUserForm.lastName;
     const email = createUserForm.email.value;
     const password = createUserForm.password.value;
-  
+
     createUser(auth, name, email, password);
-  
+
   });
 }
 
@@ -46,10 +49,25 @@ const loginForm = document.getElementById("loginForm");
 if (loginForm) {
   loginForm.addEventListener("submit", e => {
     e.preventDefault();
-  
+
     const email = loginForm.email.value;
     const password = loginForm.password.value;
-  
+
     login(email, password);
   });
+}
+
+async function addUserToDatabase(db, userId, userInfo = {}) {
+  try {
+    await setDoc(doc(db, "users", userId), userInfo);
+
+  }catch (e) {
+    console.log(e)
+  }
+}
+
+export {
+  createUser,
+  login,
+  addUserToDatabase
 }
