@@ -17,7 +17,7 @@ createProductForm.addEventListener("submit", e => {
     } else {
         const createProductForm = {
             name,
-            color, 
+            color,
             price,
             stock,
         };
@@ -25,4 +25,8 @@ createProductForm.addEventListener("submit", e => {
         createProduct(createProductForm);
     }
 })
+
+
+
+
 

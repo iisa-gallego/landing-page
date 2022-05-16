@@ -28,7 +28,6 @@ async function login(email, password) {
   }
 }
 
-
 const createUserForm = document.getElementById("createUserForm");
 
 if (createUserForm) {

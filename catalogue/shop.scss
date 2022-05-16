@@ -5,6 +5,14 @@ $urbanistFont: 'Urbanist', sans-serif;
     font-family: $urbanistFont;
 }
 
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
 .header {
     display: flex;
     height: 15%;
@@ -28,6 +36,7 @@ $urbanistFont: 'Urbanist', sans-serif;
         margin-top: 45px;
         justify-content: space-between;
         width: 500px;
+        list-style: none;
     }
 
     &__item {
@@ -65,7 +74,6 @@ body {
         background: none;
         font-size: 28px;
         text-decoration: none;
-        
     }
 
     &__pName{
