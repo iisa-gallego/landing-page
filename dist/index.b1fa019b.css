@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background: linear-gradient(left top, #ffd1ff, #fbd0c8);
+  width: 100%;
+  min-height: 80px;
+  background: linear-gradient(133deg, #ffd1ff 0%, #fcead5 49%, #fbd0c8 100%);
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  position: fixed;
+}
+
+.header__pic {
+  align-items: center;
+  display: flex;
+}
+
+.header__menu {
+  width: 500px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 45px;
+  display: flex;
+}
+
+.header__item:hover {
+  text-decoration: underline;
+}
+
+.header__icon {
+  width: 100px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 20px;
+  display: flex;
+}
+
+.banner {
+  height: 750px;
+  background: linear-gradient(to right, #ffd1ff, #fbd0c8);
+}
+
+.banner__decoration {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+body {
+  font-family: Urbanist, sans-serif;
+  font-style: light;
+  margin: 0;
+}
+
+.purpose {
+  justify-content: center;
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.purpose__p {
+  width: 50%;
+  padding-top: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.purpose .catalogue {
+  background-color: #ffe9eb;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.purpose .catalogue__content {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+}
+
+.purpose .catalogue__img {
+  justify-content: space-around;
+  display: flex;
+}
+
+.purpose .catalogue__button {
+  color: #fff;
+  text-align: center;
+  width: 200px;
+  height: 80px;
+  cursor: pointer;
+  background-color: #0f0f0f;
+  border: none;
+  margin: 5%;
+  padding: 15px 32px;
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.purpose .catalogue .productImage {
+  width: 320px;
+  height: 476px;
+}
+
+.purpose .catalogue__content {
+  font-family: Urbanist;
+  font-size: 36px;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=index.b1fa019b.css.map */
