@@ -7,14 +7,17 @@
     <title>Document</title>
 </head>
 
-
+<link rel="stylesheet" href="./bag/stylesBag.scss">
 
 <body>
-    <ul class="bag" id="bag">
-    </ul>
-    <div id="total"></div>
+    <h1>List of products</h1>
+    <div id="product-content">
+        <!--No borres este div, aqui es donde se cargan los datos-->
 
-    <script src="./bag/bag.js" type="module"></script>
-    
+    </div>
+
+    <script type="module">
+        import { getData } from './bag/bag.js'; window.onload = getData();
+    </script>
 </body>
 </html>

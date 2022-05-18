@@ -20,6 +20,7 @@ createProductForm.addEventListener("submit", e => {
             color,
             price,
             stock,
+            description
         };
 
         createProduct(createProductForm);

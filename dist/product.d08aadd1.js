@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"7tdAC":[function(require,module,exports) {
+})({"2oNpI":[function(require,module,exports) {
 "use strict";
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "0453123c679d69aa";
+module.bundle.HMR_BUNDLE_ID = "37a7e128d08aadd1";
 function _toConsumableArray(arr) {
     return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
@@ -525,30 +525,73 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"8akxJ":[function(require,module,exports) {
-var _products = require("../functions/products");
-const createProductForm = document.getElementById("createProduct");
-createProductForm.addEventListener("submit", (e)=>{
-    e.preventDefault();
-    const name = createProductForm.name.value;
-    const color = createProductForm.colors.value;
-    const price = createProductForm.price.value;
-    const stock = createProductForm.stock.value;
-    const description = createProductForm.description.value;
-    console.log(name, color, price, stock, description);
-    if (name === "" && color === "" && price === "" && stock === "" && description === "") alert("Empty field");
-    else {
-        const createProductForm1 = {
-            name,
-            color,
-            price,
-            stock,
-            description
-        };
-        _products.createProduct(createProductForm1);
+},{}],"4ET6H":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "createProduct", ()=>createProduct
+);
+parcelHelpers.export(exports, "addTocar", ()=>addTocar
+);
+parcelHelpers.export(exports, "getData", ()=>getData
+);
+var _app = require("./app");
+var _firestore = require("firebase/firestore");
+async function createProduct(data) {
+    try {
+        const productsCol = _firestore.collection(_app.db, "products");
+        const productDoc = await _firestore.addDoc(productsCol, data);
+        return productDoc;
+    } catch (error) {
+        console.error(error);
     }
-});
+}
+async function addTocar(data) {
+    try {
+        const productsCol = _firestore.collection(_app.db, "shopping");
+        const productDoc = await _firestore.addDoc(productsCol, data);
+        consol.log(productDoc);
+    } catch (error) {
+        console.error(error);
+    }
+}
+async function getData() {
+    const content = document.getElementById("product-content");
+    try {
+        const querySnapshot = await getDocs(_firestore.collection(_app.db, "products"));
+        let html = "";
+        querySnapshot.forEach((doc)=>{
+            const data = doc.data();
+            html += ` 
+            <div class="product-view-card"> 
+                <div id="product-container">
+                    <div id="product-img">
+                    </div>
+                    <div id="product-data">
+                        <h3>
+                        ${data.name}
+                        </h3>
+                        <p>${data.description}</p>
+                        <p>$ ${data.price}</p>
+                    </div>
+                    <button class='btn-addtocar' data-product="${data.description}" data-id="${doc.id}" data-name="${data.name}" data-price="${data.price}">Add to car</button>
+                </div>
+            </div>`;
+            console.log(doc.id, "=>", doc.data());
+        });
+        content.innerHTML = html; //insertamos el documento html en el div
+        const btnAddToCar = content.querySelectorAll('.btn-addtocar');
+        btnAddToCar.forEach((btn)=>{
+            btn.addEventListener('click', async ({ target: { dataset  }  })=>{
+                await _firestore.addDoc(_firestore.collection(_app.db, "shopping"), "id", dataset.id, "name", dataset.name, "price", dataset.price, "description", dataset.description);
+            }).try((value)=>{
+                alert("Added to bag", value);
+            }).catch((error)=>{
+                alert("Error:", error);
+            });
+        });
+    } catch (e) {}
+}
 
-},{"../functions/products":"4ET6H"}]},["7tdAC","8akxJ"], "8akxJ", "parcelRequire2d1f")
+},{"./app":"4Uk12","firebase/firestore":"cJafS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["2oNpI","4ET6H"], "4ET6H", "parcelRequire2d1f")
 
-//# sourceMappingURL=createProduct.679d69aa.js.map
+//# sourceMappingURL=product.d08aadd1.js.map
